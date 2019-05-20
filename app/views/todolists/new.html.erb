@@ -1,0 +1,16 @@
+<h1>Add a To-do List</h1>
+<%= form_with(model: @todolist, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :Title %>
+    <%= f.text_field :listname, required: true, placeholder: "What's the name of your list?" %>
+  </div>
+  <ul>
+  <li>
+  <div class="field">
+    <%= f.label :Items %>
+    <%= f.text_field :content %>
+  </div>
+  </li>
+  </ul>
+  <%= f.submit %>
+<% end %>

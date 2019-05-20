@@ -1,0 +1,14 @@
+<h1>Edit your To-do list</h1>
+<%= form_for @todolist do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :listname %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit %>
+  <div class="extra content">
+    <%= link_to 'Edit', edit_todolist_path(@todolist) %> |
+    <%= link_to 'Back', todolists_path %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="row">
+<div class="col s12 m5">
+  <div class="card-panel teal">
+    <span class="white-text">
+      <%= @todolist.listname %>
+      <br/>
+      <%= @todolist.content %>
+    </span>
+  </div>
+</div>
+  <div class="extra content">
+    <%= link_to 'Edit', edit_todolist_path(@todolist) %> |
+    <%= link_to 'Back', todolists_path %>
+  </div>
+</div>
+       
+

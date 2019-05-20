@@ -1,0 +1,21 @@
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.first_name %></h2>
+<hr />
+<%= link_to "Add a To-do List", new_todolist_path %>
+<h3>Your To-do List</h3>
+
+  <% @todolists.each do |todolist| %>
+    <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel teal">
+          <span class="white-text">
+            <%= todolist.listname %>
+          <br/>
+            <%= todolist.content %>
+          </span>
+        </div>
+      </div>
+    <%= link_to "Show", todolist_path(todolist) %></td>
+    <%= link_to "Edit", edit_todolist_path(todolist) %></td>
+    <%= link_to "Delete", todolist_path(todolist), method: :delete %></td>
+  <% end %>
